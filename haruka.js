@@ -60,7 +60,7 @@ function title() {
     const haruka = harukaConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Haruka Multi Device','Safari','1.0.0'],
+        browser: ['Nai Dev Multi Device','Safari','1.0.0'],
         auth: state
     })
 	title() 
@@ -143,7 +143,7 @@ function title() {
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await haruka.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haruka.getName(i + '@s.whatsapp.net')}\nFN:${await haruka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:email@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://youtube.com/\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haruka.getName(i + '@s.whatsapp.net')}\nFN:${await haruka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:rnizar221@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://www.nizarr.my.id/\nitem3.X-ABLabel:Instagram:https://instagram.com/nizarrrahman.f_\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	haruka.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
